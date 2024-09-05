@@ -2,10 +2,6 @@ import java.util.Stack;
 
 public class Solution {
 
-    public Solution() {
-        Stack<Character> x = new Stack<Character>();
-    }
-
     public boolean isValid(String s) {
         if(s.length() <= 1) {return false;}
 
