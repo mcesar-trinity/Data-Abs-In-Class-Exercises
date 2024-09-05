@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 class Sum{
 
 	int num;
@@ -20,11 +19,11 @@ class Sum{
 
 	}
 
-public static void main(String[] args) {
-	Sum A = new Sum(20);
+	public static void main(String[] args) {
+	Sum A = new Sum(8);
 	System.out.println(A.add());
 
-}
+	}
 
 
 

@@ -18,17 +18,17 @@ class ifTrue{
 	
 	}
 
-public static void main(String[] args) {
+	public static void main(String[] args) {
 	ArrayList<Integer> first = new ArrayList<Integer>();
 	first.add(1);
 	first.add(2);
 	first.add(3);
 	first.add(4);
 	first.add(5);
-	first.add(1);
+	first.add(6);
 	ifTrue A = new ifTrue(first);
 	System.out.println(A.test());
 
-}
+	}
 
 }
