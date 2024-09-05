@@ -1,3 +1,7 @@
+<<<<<<< HEAD:Sum.java
+=======
+
+>>>>>>> origin/main:Test.java
 class Sum{
 
 	int num;
