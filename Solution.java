@@ -35,7 +35,7 @@ public class Solution {
 
     public static void main (String[] args) {
         Solution x = new Solution();
-        System.out.println(x.isValid("({}])"));
+        System.out.println(x.isValid("({})[]"));
     }
 }
 
