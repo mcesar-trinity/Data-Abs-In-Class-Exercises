@@ -26,6 +26,7 @@ public class tree {
         return res;
     }
 
+    //helper function for inorderTraversal
     public void inorder(TreeNode node, List<Integer> res) {
         if(node == null) {
             return;
@@ -61,6 +62,7 @@ public class tree {
         return root;
     }
 
+    //helper function for deleteNode
     public TreeNode getSuccessor(TreeNode curr) {
         curr = curr.right;
         while(curr != null && curr.left != null) {
@@ -99,6 +101,7 @@ public class tree {
         else{return true;}
     }
 
+    //helper function for isBalanced
     public int height(TreeNode curr) {
         if(curr == null){
             return 0;
@@ -108,7 +111,7 @@ public class tree {
         return Math.max(leftH, rightH);
     }
     
-
+    //helper function that i tried to write lol
     /* public int height2(TreeNode root) {
         int leftSum = 0;
         int rightSum = 0;
@@ -128,7 +131,16 @@ public class tree {
             return height;
         }
         else {return -1;}
-    }*/
+    }
+        
+    public boolean isBalanced2(TreeNode root) {
+        if(root == null) {return true;}
+        int lef = height2(root.left);
+        int rig = heigh2(root.right);
+    
+    }
+    
+    */
 
 
 }
