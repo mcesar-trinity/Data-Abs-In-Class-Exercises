@@ -9,6 +9,7 @@ public class tree {
         int val;
         TreeNode left;
         TreeNode right;
+        TreeNode root;
         TreeNode() {}
         TreeNode(int val) {this.val = val;}
         TreeNode(int val, TreeNode left, TreeNode right) {
@@ -68,5 +69,67 @@ public class tree {
         //this gets left most node of the right subtree
         return curr;
     }
+
+    public int min(TreeNode root) {
+        TreeNode curr = root.left;
+        while(curr.left != null) {
+            curr = curr.left;
+        }
+        return curr.val;
+    }
+
+    public int max(TreeNode root) {
+        TreeNode curr = root.right;
+        while(curr.left != null) {
+            curr = curr.right;
+        }
+        return curr.val;
+    }
+
+    public boolean isBalanced(TreeNode root) {
+        if(root==null) {return true;}
+        int lef = height(root.left);
+        int righ = height(root.right);
+        if(Math.abs(lef - righ) > 1) {
+            return false;
+        }
+        else if (isBalanced(root.left) == false || isBalanced(root.right) == false) {
+            return false;
+        }   
+        else{return true;}
+    }
+
+    public int height(TreeNode curr) {
+        if(curr == null){
+            return 0;
+        }
+        int leftH = height(curr.left);
+        int rightH = height(curr.right);
+        return Math.max(leftH, rightH);
+    }
+    
+
+    /* public int height2(TreeNode root) {
+        int leftSum = 0;
+        int rightSum = 0;
+        TreeNode curr = root;
+        while(curr.right != null) {
+            curr = curr.right;
+            rightSum++;
+        }
+        while(curr.left != null){
+            curr = curr.left;
+            leftSum++;
+        }
+        int height = 0;
+        if(0 <= Math.abs(leftSum-rightSum) && Math.abs(leftSum-rightSum) <= 1) {
+            if((leftSum > rightSum) || leftSum == rightSum) {height = leftSum;}
+            else if(rightSum > leftSum) {height = rightSum;}
+            return height;
+        }
+        else {return -1;}
+    }*/
+
+
 }
 
