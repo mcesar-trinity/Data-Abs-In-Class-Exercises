@@ -110,6 +110,21 @@ public class tree {
         int rightH = height(curr.right);
         return Math.max(leftH, rightH);
     }
+
+    public TreeNode sortedArrayToTree(int[] nums) {
+        int n = nums.length;
+        if(n == 0) {return null;}
+        return sortHelper(nums, 0, n-1);
+    }
+
+    public TreeNode sortHelper(int[] nums, int s, int e) {
+        if (s > e) { return null;}
+        int mid = s + (e - s) / 2;
+        TreeNode node = new TreeNode(nums[mid]);
+        node.left = sortHelper(nums, s, mid-1);
+        node.right = sortHelper(nums, mid+1, e);
+        return node;
+    }
     
     //helper function that i tried to write lol
     /* public int height2(TreeNode root) {
