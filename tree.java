@@ -157,6 +157,41 @@ public class tree {
     
     */
 
+    /*public int height(TreeNode node) {
+        if(node == null){return 0;}
+        else{ 
+            int leftHeight = height(node.left);
+            int rightHeight = height(node.right);
+            return Math.max(leftHeight, rightHeight);
+        }
+    }*/
+
+    public int balanceFactor(TreeNode node){
+        return height(node.right) - height(node.left);
+    }
+
+    public TreeNode rotateLeft(TreeNode node){
+        TreeNode rightChild = node.right;
+        node.right = rightChild.left;
+        rightChild.left = node;
+        return rightChild;
+    }
+
+    public TreeNode rotateRight(TreeNode node) {
+        TreeNode leftChild = node.left;
+        node.left = leftChild.right;
+        leftChild.right = node;
+        return leftChild;
+    }
+
+    /*public TreeNode doubleLeft(TreeNode node){
+
+    }
+
+    public TreeNode doubleRight(TreeNode node){
+        
+    }*/
+
 
 }
 
