@@ -23,8 +23,8 @@ class numGame{
             index++;
         }   
 
-        //OR DO THE FOLLOWING
-        
+        //OR DO THE FOLLOWING, has complexity nlog(n)
+
         /*Arrays.sort(nums);
         int n = nums.length;
         for(int i = 0; i<n-1;  i= i+2){
